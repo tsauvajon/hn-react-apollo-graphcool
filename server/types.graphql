@@ -5,6 +5,7 @@ type Link @model {
   description: String!
   url: String!
   postedBy: User @relation(name: "UsersLinks")
+  votes: [Vote!]! @relation(name: "VotesOnLinks")
 }
 
 
@@ -20,6 +21,12 @@ type User @model {
   password: String!
   name: String!
   links: [Link!]! @relation(name: "UsersLinks")
+  votes: [Vote!]! @relation(name: "UsersVotes")
 }
 
 
+type Vote @model {
+  id: Id! @isUnique
+  user: User! @relation(name: "UsersVotes")
+  link: Link! @relation(name: "VotesOnLinks")
+}
