@@ -5,7 +5,7 @@ import gql from 'graphql-tag'
 import Link from './Link'
 
 class LinkList extends Component {
-  render() {
+  render () {
     if (this.props.allLinksQuery && this.props.allLinksQuery.loading) {
       return <div>Loading</div>
     }
@@ -37,4 +37,4 @@ query AllLinksQuery {
 }
 `
 
-export default graphql(ALL_LINKS_QUERY, { name: 'allLinksQuery' }) (LinkList)
+export default graphql(ALL_LINKS_QUERY, { name: 'allLinksQuery' })(LinkList)
