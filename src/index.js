@@ -11,8 +11,9 @@ import registerServiceWorker from './registerServiceWorker'
 import './styles/index.css'
 import App from './components/App'
 import { GC_AUTH_TOKEN } from './constants'
+import graphcoolUrl from './secrets'
 
-const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjbxmlgfg1fn50165jk1sqxs2' })
+const httpLink = new HttpLink({ uri: graphcoolUrl })
 
 const middlewareAuthLink = new ApolloLink((operation, forward) => {
   const token = localStorage.getItem(GC_AUTH_TOKEN)
