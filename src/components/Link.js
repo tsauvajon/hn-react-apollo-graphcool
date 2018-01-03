@@ -14,7 +14,7 @@ class Link extends Component {
           <span className='gray'>
             {this.props.index + 1}.
           </span>
-          {userId && <div className='ml1 gray fill' onClick={() => this._voteForLink()}>▲</div>}
+          {userId && <div className='ml1 gray fill pointer' onClick={() => this._voteForLink()}>▲</div>}
         </div>
         <div className='ml1'>
           <div>{this.props.link.description} ({this.props.link.url})</div>

@@ -8,10 +8,12 @@ class Header extends Component {
     const userId = localStorage.getItem(GC_USER_ID)
 
     return (
-      <div className='flex pal justify-between nowrap orange'>
+      <div className='flex pal justify-between nowrap orange pa1'>
         <div className='flex flex-fixed black'>
           <div className='fw7 mrl'>Hacker News</div>
           <Link to='/' className='ml1 no-underline black'>new</Link>
+          <div className='ml1'>|</div>
+          <Link to='/search' className='ml1 no-underline black'>search</Link>
           {userId &&
             <div className='flex'>
               <div className='ml1'>|</div>
