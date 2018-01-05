@@ -5,6 +5,7 @@
   "homepage": "https://tsauvajon.github.io/hn-react-apollo-graphcool/",
   "dependencies": {
     "apollo-client-preset": "^1.0.5",
+    "apollo-link-ws": "^1.0.4",
     "gh-pages": "^1.1.0",
     "graphql": "^0.12.3",
     "graphql-tag": "^2.6.1",
@@ -13,7 +14,8 @@
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "subscriptions-transport-ws": "^0.9.4"
   },
   "scripts": {
     "start": "react-scripts start",
