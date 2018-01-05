@@ -99,7 +99,7 @@ class LinkList extends Component {
       document: VOTE_CREATED_SUBSCRIPTION,
       updateQuery: (previous, { subscriptionData }) => {
         const votedLinkIndex = previous.allLinks.findIndex(link => link.id === subscriptionData.data.Vote.node.link.id)
-        const link = subscriptionData.Vote.node.link
+        const link = subscriptionData.data.Vote.node.link
         const newAllLinks = previous.allLinks.slice()
 
         newAllLinks[votedLinkIndex] = link

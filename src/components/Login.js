@@ -58,7 +58,7 @@ class Login extends Component {
   _confirm = async () => {
     const { name, email, password } = this.state
 
-    console.log(`Submit: { name: ${name}, email: ${email}, password: ${password} }, login: ${this.state.login}`)
+    // console.log(`Submit: { name: ${name}, email: ${email}, password: ${password} }, login: ${this.state.login}`)
 
     if (this.state.login) {
       const result = await this.props.authenticateUserMutation({
@@ -87,7 +87,6 @@ class Login extends Component {
   }
 
   _saveUserData = (id, token) => {
-    console.log(`Saving user data: { id: ${id}, token: ${token} }`)
     localStorage.setItem(GC_USER_ID, id)
     localStorage.setItem(GC_AUTH_TOKEN, token)
   }
