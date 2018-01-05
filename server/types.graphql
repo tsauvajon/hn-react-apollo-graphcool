@@ -26,7 +26,7 @@ type User @model {
 
 
 type Vote @model {
-  id: Id! @isUnique
+  id: ID! @isUnique
   user: User! @relation(name: "UsersVotes")
   link: Link! @relation(name: "VotesOnLinks")
 }
