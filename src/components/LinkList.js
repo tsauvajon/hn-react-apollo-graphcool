@@ -25,7 +25,7 @@ class LinkList extends Component {
       <div>
         <div>
           {linksToRender.map((link, index) => (
-            <Link key={link.id} index={index + (page - 1) * LINKS_PER_PAGE} link={link} updateStoreAfterVote={this._updateCacheAfterVote} />
+            <Link key={link.id} index={isNewPage ? index + (page - 1) * LINKS_PER_PAGE : index} link={link} updateStoreAfterVote={this._updateCacheAfterVote} />
           ))}
         </div>
         {isNewPage &&
