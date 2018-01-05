@@ -94,6 +94,12 @@ mutation CreateLinkMutation($description: String!, $url: String!, $postedById: I
       id
       name
     }
+    votes {
+      id
+      user {
+        id
+      }
+    }
   }
 }
 `
