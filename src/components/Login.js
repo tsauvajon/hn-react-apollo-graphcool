@@ -111,9 +111,7 @@ mutation AuthenticateUserMutation($email: String!, $password: String!) {
     password: $password
   ) {
     token
-    user {
-      id
-    }
+    id
   }
 }
 `
